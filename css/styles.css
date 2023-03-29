@@ -22,7 +22,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   /* width: 1152px;*/
-  max-width: 396px;
+  max-width: 479.98px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -57,7 +57,7 @@ img {
 
 body {
   color: var(--primary-text-color);
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0.02em;
   margin: 0;
 }
@@ -140,8 +140,8 @@ body {
   text-decoration: none;
   border-color: rgba(0, 0, 0, 0);
   cursor: pointer;
-  height: 22px;
-  width: 32px;
+  height: 40px;
+  width: 40px;
   padding: 0;
 }
 
@@ -196,7 +196,7 @@ ul {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("../images/peopleoffice.jpg");
+    url("../images/phone-hero-x1.jpg");
   max-width: 1440px;
   margin: 0 auto;
   background-size: cover;
@@ -212,7 +212,7 @@ ul {
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
-  width: 496px;
+  max-width: 496px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -281,21 +281,25 @@ ul {
   background-image: url("../images/antena.svg");
   background-size: 64px;
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 .title-p .li.hod::before {
   background-image: url("../images/hod.svg");
   background-size: 64px;
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 .title-p .li.comp::before {
   background-image: url("../images/comp.svg");
   background-size: 64px;
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 .title-p .li.astronaut::before {
   background-image: url("../images/astronaut.svg");
   background-size: 64px;
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 /*.title-p .li:not(:last-child) {
@@ -344,6 +348,9 @@ ul {
   align-items: center;
   /*display: flex;
   justify-content: space-between;*/
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
 }
 .title-img .li {
   /*width: 264px;*/
@@ -357,8 +364,8 @@ ul {
   line-height: 1.2;
 }
 .title-p .text-p {
-  font-weight: 400px;
-  margin-bottom: 32px;
+  font-weight: 400;
+
   font-size: 16px;
   line-height: 1.5;
 }
@@ -366,7 +373,7 @@ ul {
   text-align: center;
 
   font-weight: 400px;
-  margin-bottom: 32px;
+
   font-size: 16px;
   line-height: 1.5;
 }
@@ -378,7 +385,7 @@ ul {
 }
 .footer-p {
   margin-top: 16px;
-  width: 264px;
+  width: 268px;
   color: var(--color-footera);
 }
 
@@ -396,9 +403,27 @@ ul {
   padding: 8px 24px 8px 24px;
   color: var(--color-giant);
   border-color: transparent;
-  font-weight: 500px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.button-footer::after {
+  display: block;
+  content: "";
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/frame.svg");
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
 }
 .input-footer {
   box-sizing: border-box;
@@ -407,6 +432,7 @@ ul {
   border: 1px solid #ffffff;
   border-radius: 4px;
   width: 264px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
   height: 40px;
   padding: 8px 16px;
@@ -708,9 +734,25 @@ ul {
   border-radius: 4px;
   border: 1px solid #2e2f42;
   height: 40px;
-  width: 360px;
+  width: 100%;
 }
-
+.textarea {
+  border-radius: 4px;
+  border: 1px solid rgba(142, 143, 153, 1);
+  height: 120px;
+  font-weight: 400px;
+  font-size: 12px;
+  line-height: 1.2;
+  padding-top: 12px;
+  padding-left: 16px;
+}
+.textarea::placeholder {
+  color: rgba(142, 143, 153, 1);
+}
+.textarea:focus {
+  border-color: #4d5ae5;
+  outline: transparent;
+}
 .modal-form-group > textarea {
   border-radius: 4px;
   border: 1px solid #2e2f42;
@@ -878,7 +920,7 @@ textarea {
   margin-bottom: 48px;
 }
 .mobile-svg {
-  width: 328px;
+  max-width: 328px;
   display: flex;
   justify-content: space-between;
 }
@@ -900,7 +942,7 @@ textarea {
     line-height: 1.1;
   }
   .title-p .text-p {
-    font-weight: 500px;
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
   }
@@ -923,7 +965,9 @@ textarea {
   .klientu-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
+
   .klientu-list .li {
     flex-basis: ((100% - 24px) / 2);
     justify-content: center;
@@ -958,11 +1002,19 @@ textarea {
     margin-right: auto;
 
     text-align: start;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    letter-spacing: 0.02em;
+
+    color: #f4f4fd;
   }
   .button-footer {
     margin-left: auto;
     margin-right: auto;
-    display: block;
   }
   .media {
     margin-left: auto;
@@ -978,7 +1030,7 @@ textarea {
     text-align: center;
   }
   .input-footer {
-    width: 396px;
+    width: 100%;
     padding: 8px 16px;
 
     margin-bottom: 16px;
@@ -990,6 +1042,34 @@ textarea {
   .footer {
     padding-top: 96px;
     padding-bottom: 96px;
+  }
+  .title-img .li .team-img:not(:last-child) {
+    margin-bottom: 72px;
+  }
+  .modal {
+    width: 392px;
+    height: 586px;
+  }
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+  .title-hero {
+    margin-bottom: 72px;
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    /* or 111% */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
+    /* WHITE */
+
+    color: #ffffff;
+    max-width: 320px;
   }
 }
 @media screen and (min-width: 767.98px) {
@@ -1011,11 +1091,17 @@ textarea {
     font-size: 36px;
     line-height: 1.1;
   }
+  .title-p .text-p {
+    font-weight: 500;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
   .works {
     display: none;
   }
   .title-img {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 72px 24px;
@@ -1023,9 +1109,7 @@ textarea {
   .title-img .li {
     flex-basis: ((100% - 24px) / 2);
   }
-  .team-img {
-    margin-bottom: 64px;
-  }
+
   /*.title-img .li:not(:nth-child(2n)) {
     margin-right: 24px;тут помилка з іконками
   }*/
@@ -1080,6 +1164,19 @@ textarea {
   .title-img .li {
     width: 264px;
   }
+  .title-p .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .title-p .text-p {
+    font-family: "Roboto";
+    font-weight: 400;
+    margin-bottom: 0px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
   .klientu-list {
     display: flex;
 
@@ -1110,6 +1207,12 @@ textarea {
   .button-footer {
     margin-left: 24px;
   }
+  .f-web {
+    margin-right: 120px;
+  }
+  .works {
+    display: block;
+  }
 }
 @media screen and (max-width: 1199px) {
   .title-p .li::before {
@@ -1120,5 +1223,75 @@ textarea {
   .span-footer {
     width: 100%;
     padding: 0;
+  }
+}
+@media screen and (min-width: 767.98px) and (max-width: 1199.98px) {
+  .conteiner.foot {
+    padding: 0 108px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .span-footer {
+    display: flex;
+  }
+  .form-footer {
+    margin-top: 72px;
+  }
+  .f-web {
+    width: 264px;
+  }
+  .footer-p {
+    width: 100%;
+  }
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/mobile-hero-bgx2.jpg);
+  }
+}
+@media screen and (min-width: 767.98px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet-hero-x2.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2) and (min-width: 767.98px),
+  (min-resolution: 192dpi) and (min-width: 767.98px),
+  (min-resolution: 2dppx) and (min-width: 767.98px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/tablet-hero-x1.jpg);
+  }
+}
+@media screen and (min-width: 1199.98px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/peopleoffice.jpg);
+  }
+}
+@media (min-device-pixel-ratio: 2) and (min-width: 1199.98px),
+  (min-resolution: 192dpi) and (min-width: 1199.98px),
+  (min-resolution: 2dppx) and (min-width: 1199.98px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/dekstop-hero-2x.jpg);
   }
 }

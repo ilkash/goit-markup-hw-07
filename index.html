@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>resume</title>
-
+<link
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/styles.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
-      rel="stylesheet"
-    />
+    
   </head>
   <body>
     <header class="top">
@@ -27,7 +27,7 @@
                 >WEB<span class="accent-1">STUDIO</span></a
               >
               <button class="header-burger js-open-menu" type="button">
-                 <svg width="32" height="22" class="icon-burger">
+                 <svg width="40" height="40" class="icon-burger">
           <use href="./images/symbol-defs.svg#menu"></use>
         </svg>
               </button>
@@ -116,14 +116,15 @@
         <h2 class="big-title">What are we doing</h2>
         <ul class="work">
           <li class="li">
-           <img src="./images/comp.jpg" alt="computer" width="360" />
+           <img srcset="./images/comp.jpg 1x, ./images/comp2.jpg 2x"src="./images/comp.jpg" alt="computer" width="360" />
           </li>
 
           <li class="li">
-            <img src="./images/tel.jpg" alt="phone" width="360" />
+            <img srcset="./images/tel.jpg 1x, ./images/tel2.jpg 2x" src=".images/tel.jpg" alt="phone" width="360" />
           </li>
           <li class="li">
             <img
+            srcset="./images/compandtel.jpg 1x, ./images/comptel2.jpg 2x"
               src="./images/compandtel.jpg"
               alt="phone and computer"
               width="360"
@@ -140,7 +141,7 @@
         <h2 class="big-title">Our Team</h2>
         <ul class="title-img">
           <li class="li">
-            <img src="./images/mark.jpg" alt="mark" width="264" class="foto"/>
+            <img  srcset="./images/mark.jpg 1x, ./images/mark2.jpg 2x" src="./images/mark.jpg" alt="mark" width="264" class="foto"/>
             <div class="team-img"><h3 class="title">Mark Guerrero</h3>
             <p class="text-p">Product Designer</p>
             <ul class="list-svg">
@@ -159,7 +160,7 @@
         </ul>
    </div> 
    <li class="li">
-            <img src="./images/tom.jpg" alt="mark" width="264" class="foto"/>
+            <img  srcset="./images/tom.jpg 1x, ./images/tom2.jpg 2x"  src="./images/tom.jpg" alt="mark" width="264" class="foto"/>
             <div class="team-img"><h3 class="title">Tom Ford</h3>
             <p class="text-p">Frontend Developer</p>
       <ul class="list-svg">
@@ -178,7 +179,7 @@
         </ul>
    </div> 
     <li class="li">
-            <img src="./images/camila.jpg" alt="mark" width="264" class="foto"/>
+            <img srcset="./images/camila.jpg 1x, ./images/camila2.jpg 2x" src="./images/camila.jpg" alt="mark" width="264" class="foto"/>
             <div class="team-img"><h3 class="title">Camila Garcia</h3>
             <p class="text-p">Marketing</p>
        <ul class="list-svg">
@@ -197,7 +198,7 @@
         </ul>
    </div>         
            <li class="li">
-            <img src="./images/daniel.jpg" alt="mark" width="264" class="foto"/>
+            <img srcset="./images/daniel.jpg, ./images/daniel2.jpg 2x" src="./images/daniel.jpg" alt="mark" width="264" class="foto"/>
             <div class="team-img"><h3 class="title">Daniel Wilson</h3>
             <p class="text-p">UI Designer</p>
        <ul class="list-svg">
@@ -311,7 +312,8 @@
         <div class="form-footer">
           <p class="media-p">Subscribe</p>
           <label for="mail" class=""></label>
-          <span class="span-footer">
+          <form class="span-footer">
+            
             <input
               type="email"
               name="mail"
@@ -319,8 +321,7 @@
               class="input-footer"
               placeholder="E-mail"
             />
-            <button type="submit" class="button-footer">Subscribe</button></span
-          >
+            <button type="submit" class="button-footer">Subscribe</button></form>
         </div>
       </div>
     </footer>
@@ -366,9 +367,7 @@
       <div class="modal-form-group">
         <label for="comment" class="title-input">Comment</label>
       
-<textarea name="comment" id="comment" cols="10" rows="10" placeholder="Text input">
-  
-</textarea>
+<textarea name="comment" id="comment" cols="10" rows="10" placeholder="Text input" class="textarea"></textarea>
 </div>
     
         <div class="checkbox-wrapper">
